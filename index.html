@@ -48,6 +48,21 @@
       border-radius: 1rem;
       padding: 1.5rem;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      margin-bottom: 20px;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+    }
+    .card-paragraph {
+      font-size: 0.95rem;
+      color: #353b48;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+    .card .card-paragraph.show {
+      max-height: 300px;
+      margin-top: 10px;
     }
     footer {
       text-align: center;
@@ -83,64 +98,79 @@
 <body>
   <header>
     <h1>Henry Pham</h1>
-    <!--<p>Student Teacher | Passionate Educator | Lifelong Learner</p>-->
+    <p>Student Teacher | Graduate of Computer Science | Lifelong Learner</p>
   </header>
   <main>
-    <section class="card">
-      <h2>About Me</h2>
-      <p>I am a student teacher committed to inspiring young minds and fostering a supportive, engaging classroom environment. I believe every child can succeed with the right encouragement and guidance.</p>
-    </section>
+    <div class="container">
+      <div class="card">
+        <h2>About Me</h2>
+        <div class="card-paragraph">I am a student teacher committed to inspiring young minds and fostering a supportive, engaging classroom environment. I believe every child can succeed with the right encouragement and guidance.</div>
+      </div>
+    </div>
 
-    <section class="card">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>Bachelor of Science - Computer Science</strong> – University of Windsor (2019 – 2023)</li>
-        <ul>
-          <li>Major Average: 93.077</li>
-        </ul>
-        <li><strong>Bachelor of Education</strong> – University of Windsor (2025 – Present)</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Teaching Experience</h2>
-      <ul>
-        <li><strong>Teaching Assistant</strong> – University of Windsor (2020 – 2023)<br />
-          Assisted in teaching 5 different undergraduate courses including:<br />
-          <ul>
-            <li>Introduction to Algorithms and Programming</li>
-            <li>Introduction to Algorithms and Programming II</li>
-            <li>Social Media and Mobile Technology for End Users</li>
-            <li>Computer Languages, Grammars and Translators</li>
-            <li>Data Structures and Algorithms</li>
-          </ul>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Skills</h2>
-      <div class="section" id="skills">
-        <div class="skills-container">
-          <div class="skill">
-            <div class="skill-name">Python Programming</div>
-            <div class="skill-bar">
-              <div class="skill-progress" data-progress="90%"></div>
-            </div>
+    <div class="container">
+      <div class="card">
+        <h2>Education</h2>
+          <div class="card-paragraph">
+            <ul>
+              <li><strong>Bachelor of Science - Computer Science</strong> – University of Windsor (2019 – 2023)</li>
+              <ul>
+                <li>Major Average: 93.077</li>
+              </ul>
+              <li><strong>Bachelor of Education</strong> – University of Windsor (2025 – Present)</li>
+            </ul>
           </div>
-          <div class="skill">
-            <div class="skill-name">Lesson Planning</div>
-            <div class="skill-bar">
-              <div class="skill-progress" data-progress="85%"></div>
-            </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <h2>Teaching Experience</h2>
+          <div class="card-paragraph">
+            <ul>
+              <li><strong>Teaching Assistant</strong> – University of Windsor (2020 – 2023)<br />
+                Assisted in teaching 5 different undergraduate courses including:<br />
+                <ul>
+                  <li>Introduction to Algorithms and Programming</li>
+                  <li>Introduction to Algorithms and Programming II</li>
+                  <li>Social Media and Mobile Technology for End Users</li>
+                  <li>Computer Languages, Grammars and Translators</li>
+                  <li>Data Structures and Algorithms</li>
+                </ul>
+            </ul>
           </div>
-          <div class="skill">
-            <div class="skill-name">Problem-Solving</div>
-            <div class="skill-bar">
-              <div class="skill-progress" data-progress="80%"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <h2>Skills</h2>
+        <div class="card-paragraph">
+          <div class="section" id="skills">
+            <div class="skills-container">
+              <div class="skill">
+                <div class="skill-name">Python Programming</div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="90%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">Lesson Planning</div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="85%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">Problem-Solving</div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="80%"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
     
       <script>
         const observer = new IntersectionObserver(entries => {
@@ -162,37 +192,58 @@
     
     </section>
     
-    <section class="card">
-      <h2>Honours & Awards</h2>
-      <ul>
-        <li><strong>Vera & Gordon Noakes Scholarship</strong>
-          <ul>
-            <li>
-              University of Windsor<p align="right">Winter 2022</p>
-            </li>
-          </ul>
-        </li>
-        <li><strong>Dr. David H. Hubel Scholarship</strong>
-          <ul>
-            <li>
-              University of Windsor<p align="right">Winter 2020</p>
-            </li>
-          </ul>
-        </li>
-        <li><strong>Windsor Roseland Bursary</strong>
-          <ul>
-            <li>
-              Rotary Club of Windsor<p align="right">Summer 2019</p>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-    <section class="card">
-      <h2>Contact</h2>
-      <p>Email: henrypham527@gmail.com<br />Phone: (519) 971-8277<br />LinkedIn: <a href="https://linkedin.com/in/henry-pham-7175b219a">linkedin.com/in/henry-pham-7175b219a</a></p>
-    </section>
+    <div class="container">
+      <div class="card">
+        <h2>Honours & Awards</h2>
+          <div class="card-paragraph">
+            <ul>
+              <li><strong>Vera & Gordon Noakes Scholarship</strong>
+                <ul>
+                  <li>
+                    University of Windsor<p align="right">Winter 2022</p>
+                  </li>
+                </ul>
+              </li>
+              <li><strong>Dr. David H. Hubel Scholarship</strong>
+                <ul>
+                  <li>
+                    University of Windsor<p align="right">Winter 2020</p>
+                  </li>
+                </ul>
+              </li>
+              <li><strong>Windsor Roseland Bursary</strong>
+                <ul>
+                  <li>
+                    Rotary Club of Windsor<p align="right">Summer 2019</p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </div>
+    
+
+    <div class="container">
+      <div class="card">
+        <h2>Contact</h2>
+          <div class="card-paragraph">Email: henrypham527@gmail.com<br />Phone: (519) 971-8277<br />LinkedIn: <a href="https://linkedin.com/in/henry-pham-7175b219a">linkedin.com/in/henry-pham-7175b219a</a></div>
+      </div>
+    </div>
   </main>
+
+  <script>
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        // Toggle the clicked card
+        const paragraph = card.querySelector('.card-paragraph');
+        paragraph.classList.toggle('show');
+      });
+    });
+  </script>
+
   <footer>
     &copy; 2025 Henry Pham. All rights reserved.
   </footer>
